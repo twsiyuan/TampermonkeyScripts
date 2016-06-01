@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Blogger Statistics Hider
 // @name:zh-TW   Blogger 流量資訊隱藏
-// @namespace    http://tampermonkey.net/
+// @namespace    http://www.twsiyuan.com/
 // @version      0.1
 // @description  Hide all statistics info in blogger
 // @description:zh-TW  在 Blogger 管理頁面中，隱藏所有的流量統計資訊
