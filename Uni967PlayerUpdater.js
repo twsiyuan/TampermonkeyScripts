@@ -1,4 +1,5 @@
 // ==UserScript==
+// @name         Uni FM96.7 Player Updater
 // @name:zh-TW   FM96.7 環宇廣播電台線上收聽播放器調整
 // @namespace    http://www.twsiyuan.com/
 // @version      0.1
