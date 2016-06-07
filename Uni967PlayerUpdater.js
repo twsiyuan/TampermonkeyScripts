@@ -7,6 +7,7 @@
 // @author       Siyuan
 // @match        http://www.uni967.com/newweb/AOD2_no.php*
 // @grant        none
+// @require      http://code.jquery.com/jquery-latest.js
 // ==/UserScript==
 
 $(document).ready(function() {
