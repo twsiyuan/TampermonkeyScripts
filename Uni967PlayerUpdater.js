@@ -12,15 +12,23 @@
 
 $(document).ready(function() {
     var embed = $("embed");
+    
+    // 音源位置
     var audioUrl = getUrlParameterFromString(embed.attr("flashvars"), "son");
+    
+    // 節目資料網頁位置
     var id = getUrlParameterFromString(window.location.search.substring(1), "ID");
     var dataUrl = "http://www.uni967.com/newweb/index.php?menu=2&page=2_1&ID=" + id;
 
     $.get(dataUrl, function(data) {
+        // 分析資料網頁，抓取節目名稱
         var title = $(data).find("span.news_title_blue").text();
         var parent = embed.parent();
         
+        // 產生下載連結
         var download = $('<a href="' + audioUrl + '" download="' + title + '">Download</a>');
+        
+        // 產生音源播放 (HTML5 標準)
         var player = $('<audio controls autoplay src="' + audioUrl + '">Your browser does not support the audio tag.</audio>');
         
         parent.append(player);
@@ -31,8 +39,8 @@ $(document).ready(function() {
 });
 
 var getUrlParameterFromString = function getUrlParameter(sUrl, sParam) {
-    var sPageURL = decodeURIComponent(sUrl),
-        sURLVariables = sPageURL.split('&');
+    var sPageURL = decodeURIComponent(sUrl);
+    var sURLVariables = sPageURL.split('&');
 
     for (var i = 0; i < sURLVariables.length; i++) {
         var sParameterName = sURLVariables[i].split('=');
