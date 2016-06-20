@@ -22,5 +22,5 @@
     sheet.insertRule('.DY0BBXD-p-m { display: none !important; }', sheet.cssRules.length);
     sheet.insertRule('.DY0BBXD-p-m { display: none !important; }', sheet.cssRules.length);
     sheet.insertRule('.editPosts tr td:nth-child(7) { display: none !important; }', sheet.cssRules.length);   
-    
+    sheet.insertRule('.pages tr td:nth-child(7) { display: none !important; }', sheet.cssRules.length);
 })();
