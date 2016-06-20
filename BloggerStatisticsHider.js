@@ -2,7 +2,7 @@
 // @name         Blogger Statistics Hider
 // @name:zh-TW   Blogger 流量資訊隱藏
 // @namespace    http://www.twsiyuan.com/
-// @version      0.11
+// @version      0.12
 // @description  Hide all statistics info in blogger
 // @description:zh-TW  在 Blogger 管理頁面中，隱藏所有的流量統計資訊
 // @author       Siyuan
