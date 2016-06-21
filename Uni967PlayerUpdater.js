@@ -2,7 +2,7 @@
 // @name         Uni FM96.7 Player Updater
 // @name:zh-TW   FM96.7 環宇廣播電台線上收聽播放器調整
 // @namespace    http://www.twsiyuan.com/
-// @version      0.1
+// @version      0.2
 // @description:zh-TW  產生下載連結，修改 Flash Player 為 HTML5 內鍵撥放器
 // @author       Siyuan
 // @match        http://www.uni967.com/newweb/AOD2_no.php*
@@ -29,7 +29,11 @@ $(document).ready(function() {
         var download = $('<a href="' + audioUrl + '" download="' + title + '">Download</a>');
         
         // 產生音源播放 (HTML5 標準)
-        var player = $('<audio controls autoplay src="' + audioUrl + '">Your browser does not support the audio tag.</audio>');
+        var paramSaveName = "ui967Volume";
+        var volumeChanged = "if(typeof(Storage) !== 'undefined'){localStorage.setItem('" + paramSaveName + "', this.volume);}";
+        var loadStart = "if(typeof(Storage) !== 'undefined'){this.volume=localStorage.getItem('" + paramSaveName + "');}";
+            
+        var player = $('<audio controls autoplay src="' + audioUrl + '" onvolumechange="' + volumeChanged + '" onloadstart="' + loadStart + '" style="width:100%;">Your browser does not support the audio tag.</audio>');
         
         parent.append(player);
         parent.append(download);
