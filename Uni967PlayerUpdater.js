@@ -2,10 +2,10 @@
 // @name         Uni FM96.7 Player Updater
 // @name:zh-TW   FM96.7 環宇廣播電台線上收聽播放器調整
 // @namespace    http://www.twsiyuan.com/
-// @version      0.3
+// @version      0.4
 // @description:zh-TW  產生下載連結，修改 Flash Player 為 HTML5 內鍵撥放器
 // @author       Siyuan
-// @match        http://www.uni967.com/newweb/AOD2_no.php*
+// @match        http://www.uni967.com/newweb/AOD*
 // @match        http://www.uni967.com/newweb/index.php*
 // @grant        none
 // @require      http://code.jquery.com/jquery-latest.js
@@ -65,11 +65,14 @@ var doPlayer = function() {
         var paramSaveName = "ui967Volume";
         var volumeChanged = "if(typeof(Storage) !== 'undefined'){localStorage.setItem('" + paramSaveName + "', this.volume);}";
         var loadStart = "if(typeof(Storage) !== 'undefined'){this.volume=localStorage.getItem('" + paramSaveName + "');}";
-
-        var player = $('<audio controls autoplay src="' + audioUrl + '" onvolumechange="' + volumeChanged + '" onloadstart="' + loadStart + '" style="width:100%;">Your browser does not support the audio tag.</audio>');
+        var playbackRateChanged = "var a = document.getElementById('audioPlayer'); a.playbackRate = this.value;";
+        
+        var player = $('<audio controls="true" autoplay="true" playbackRate="1.0" src="' + audioUrl + '" onvolumechange="javascript:' + volumeChanged + '" onloadstart="javascript:' + loadStart + '" style="width:100%;" id="audioPlayer">Your browser does not support the audio tag.</audio>');
+        var playbackRate = $('<select onchange="javascript:' + playbackRateChanged + '"><option value="0.5">x 0.5</option><option value="0.6">x 0.6</option><option value="0.7">x 0.7</option><option value="0.8">x 0.8</option><option value="0.9">x 0.9</option><option value="1.0" selected="true">x 1.0</option><option value="1.1">x 1.1</option><option value="1.2">x 1.2</option><option value="1.3">x 1.3</option><option value="1.4">x 1.4</option><option value="1.5">x 1.5</option><option value="1.6">x 1.6</option><option value="1.7">x 1.7</option><option value="1.8">x 1.8</option><option value="1.9">x 1.9</option><option value="2.0">x 2.0</option></select>');
         var parent = embed.parent();
         
         parent.append(player);
+        parent.append(playbackRate);
         parent.append(download);
 
         embed.remove();
