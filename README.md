@@ -3,7 +3,7 @@ This is my Tampermonkey Scripts repo., sync update for [Greasyfork](https://grea
 
 ## List
 
-- [Accupass Infinite Scrolling](AccupassInfiniteScrolling.js), install from [Greasyfork](https://greasyfork.org/zh-TW/scripts/31628-accupass-infinite-scrolling).
+- [Accupass Infinite Scrolling](AccupassInfiniteScrolling.js), install from [Greasyfork](https://greasyfork.org/scripts/31628-accupass-infinite-scrolling).
 
     Load next event page automatically when scroll to bottom of the page on [Accupass](https://www.accupass.com/).
 
