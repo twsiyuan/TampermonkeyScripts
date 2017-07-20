@@ -1,8 +1,10 @@
 // ==UserScript==
 // @name         Accupass Infinite Scrolling
+// @name:zh-TW   活動通無限捲頁 (自動加載下一頁)
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  Load next event page automatically when scroll to bottom of the page on [Accupass](https://www.accupass.com/).
+// @description:zh-TW  在[活動通]((https://www.accupass.com/))瀏覽活動時，當頁面捲到頁面底部，將會自動加載下一頁活動內容，而不用手動點擊分頁按鈕
 // @author       Siyuan
 // @match        https://www.accupass.com/search/*
 // @grant        none
