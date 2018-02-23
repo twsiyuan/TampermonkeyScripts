@@ -2,7 +2,7 @@
 // @name         Blogger Statistics Hider
 // @name:zh-TW   Blogger 流量資訊隱藏
 // @namespace    http://www.twsiyuan.com/
-// @version      1.1
+// @version      1.2
 // @description  Hide all statistics info in blogger
 // @description:zh-TW  在 Blogger 管理頁面中，隱藏所有的流量統計資訊
 // @author       Siyuan
@@ -24,6 +24,6 @@ $(document).ready(function() {
 
     var sheet = window.document.styleSheets[0];
     sheet.insertRule('.gwt-Image { visibility: hidden !important; }', sheet.cssRules.length);
-    sheet.insertRule('.editPosts tr td:nth-child(7) { display: none !important; }', sheet.cssRules.length);   
-    sheet.insertRule('.pages tr td:nth-child(7) { display: none !important; }', sheet.cssRules.length);
+    sheet.insertRule('.editPosts tr td:nth-child(6) { display: none !important; }', sheet.cssRules.length);   
+    sheet.insertRule('.pages tr td:nth-child(6) { display: none !important; }', sheet.cssRules.length);
 });
